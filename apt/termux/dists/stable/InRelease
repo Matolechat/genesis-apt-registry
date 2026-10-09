@@ -1,0 +1,33 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: aarch64 all
+Codename: stable
+Components: main
+Date: Fri, 09 Oct 2026 19:42:57 +0000
+Label: Genesis Connectors
+Origin: Genesis Connectors
+Suite: stable
+MD5Sum:
+ 78bf30a68c8e689affd2a445e07da7cb              166 Release
+ 06571bf7fa1432d880627060a4651c43              509 main/binary-aarch64/Packages
+ 0ba5ab69e76a2eb64a00eae4b391d8e2              369 main/binary-aarch64/Packages.gz
+SHA1:
+ b9087bb5cfc528f8366ea43d2f6784d9f52f39ae              166 Release
+ 8c4a33c309a69b2ddb1c512ca62efa84bd9f62e5              509 main/binary-aarch64/Packages
+ 5ef5dc9d261fc5e81346e00aadd966ffbb0d036b              369 main/binary-aarch64/Packages.gz
+SHA256:
+ e8420dc09111c3db9957bf902985196086eb649f25b3c67b5c64a61dd28c0ee9              166 Release
+ b93a82630232174b683e2250be9abc8028ee98f22d3adf8f3b2ab2a9fa491b00              509 main/binary-aarch64/Packages
+ 60db111b890c0ecde2ffe1b6de349fb82ea2e8507c93db4b9163c8d7b1703b1a              369 main/binary-aarch64/Packages.gz
+SHA512:
+ 6a5be27c05e1e7c7a3e9f012328fe25c07fcb9796bfec5dd771524d5bdafe80b3a9c055f4adde6b3d6d31f2e37ba270fd990e9c0c34b2bb5abfeba9ff0812ef6              166 Release
+ b2e09133bd92b984ac770a42947edd363f0d391f34eb07b1cfd891c13160e82d8f84c00be37139c75d81f5bf7b33512a33ab5032aa119c924dd756c0e152977e              509 main/binary-aarch64/Packages
+ 209609c7ff04bae533b31eb34d995022ede576df8264d704e7e8ed37c67aaf48841f2377f8f6c15ff6670047c8ba1999a8716c311944f6f5e0d30bdade3acb13              369 main/binary-aarch64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQR/iSg6ZSssh1bwU1v7tPfVBA3LEgUCaslDwQAKCRD7tPfVBA3L
+EnbnAQCP8xkTBEtg8wVqWNG1fALdNBZqc0EgVRlCO8QgirXm3gEAhll8BfPjmIHw
+eCgLQCYr7/d7Ji/6qbja6dFoRqMEcgM=
+=kNXW
+-----END PGP SIGNATURE-----

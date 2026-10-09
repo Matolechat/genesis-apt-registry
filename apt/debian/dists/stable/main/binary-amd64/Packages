@@ -1,0 +1,15 @@
+Package: genesis
+Version: 0.1.0~dev0-1
+Architecture: all
+Maintainer: Genesis Connectors
+Depends: python3 (>= 3.10)
+Filename: pool/main/genesis/genesis_0.1.0~dev0-1_all.deb
+Size: 4808
+MD5sum: 10dc2766c938758adb41f879f632d353
+SHA1: ea140172de174142a1c189f11b58f5fcb41415e8
+SHA256: 4cd996529993f63617e10478f425fc3456f17099d976cdabbca30103e5f5f5ba
+Section: utils
+Priority: optional
+Description: Genesis Connectors universal AI integration command-line client
+ Python standard-library client for the Genesis APIs.
+
