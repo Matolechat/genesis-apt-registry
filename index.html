@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- [MIA NOTE] 2026-10-09 — Public signed APT registry; code is a development preview. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Genesis Connectors — Signed APT Packages</title>
+<style>
+:root {color-scheme:dark} body{font:16px/1.6 system-ui,-apple-system,sans-serif;max-width:900px;margin:6vh auto;padding:0 22px;background:#101423;color:#edf1fd} h1{font-size:2.4rem;line-height:1.2}h2{margin-top:2.4rem}a{color:#a5caff}code,pre{font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace}pre{overflow-x:auto;border:1px solid #34415d;border-radius:12px;padding:20px;background:#172036}small,.sub{color:#adb8ce}.eyebrow{color:#95d7ff;font-size:14px;font-weight:700}.tag{display:inline-block;border:1px solid #40506f;border-radius:20px;padding:3px 12px;color:#b9d8ff;margin:8px 0} .foot{margin-top:50px;font-size:14px}
+</style>
+</head>
+<body>
+<p class="eyebrow">GENESIS CONNECTORS / PUBLIC PACKAGE REGISTRY</p>
+<h1>Installer Genesis sur Linux ou Termux.</h1>
+<p class="sub">Dépôts APT signés avec GPG, paquets vérifiables, client Python CLI. Version de préproduction <strong>0.1.0~dev0-1</strong>.</p>
+<span class="tag">Debian / Ubuntu</span> <span class="tag">Android Termux</span>
+<h2>Termux — première installation</h2>
+<p>Pour le Termux standard (préfixe <code>/data/data/com.termux/files/usr</code>). Ajouter la clé de dépôt et sa source une seule fois :</p>
+<pre><code>set -e
+base="https://matolechat.github.io/genesis-apt-registry"
+mkdir -p "$PREFIX/etc/apt/keyrings"
+curl -fsSL "$base/genesis-archive-keyring.gpg" -o "$PREFIX/etc/apt/keyrings/genesis-archive-keyring.gpg"
+echo "b05f7df0d0f719b87fd0f55544e1171aee887617d90aa55d02981cebb0354c7e  $PREFIX/etc/apt/keyrings/genesis-archive-keyring.gpg" | sha256sum -c -
+echo "deb [signed-by=$PREFIX/etc/apt/keyrings/genesis-archive-keyring.gpg] $base/apt/termux stable main" > "$PREFIX/etc/apt/sources.list.d/genesis.list"
+apt update
+pkg install genesis
+genesis --version</code></pre>
+<h2>Debian / Ubuntu (amd64)</h2>
+<pre><code>base="https://matolechat.github.io/genesis-apt-registry"
+sudo install -d -m 755 /etc/apt/keyrings
+curl -fsSL "$base/genesis-archive-keyring.gpg" | sudo tee /etc/apt/keyrings/genesis-archive-keyring.gpg >/dev/null
+echo "b05f7df0d0f719b87fd0f55544e1171aee887617d90aa55d02981cebb0354c7e  /etc/apt/keyrings/genesis-archive-keyring.gpg" | sha256sum -c -
+echo "deb [signed-by=/etc/apt/keyrings/genesis-archive-keyring.gpg] $base/apt/debian stable main" | sudo tee /etc/apt/sources.list.d/genesis.list
+sudo apt update
+sudo apt install genesis
+genesis --version</code></pre>
+<h2>Transparence et sécurité</h2>
+<p>Fingerprint de la clé GPG : <code>7F89283A652B2C8756F0535BFBB4F7D5040DCB12</code>. <a href="./genesis-archive-keyring.gpg">Clé publique de l’archive</a>. Les empreintes SHA-256 sont inscrites dans les index.</p>
+<p>Une publication de package ne prouve ni la disponibilité d’API, ni la facturation, ni l’authentification utilisateur. Le travail de raccordement de la porte MCP multi-IA à PyPI reste distinct.</p>
+<p class="foot"><a href="./apt/termux/dists/stable/InRelease">Index Termux signé</a> · <a href="./apt/debian/dists/stable/InRelease">Index Debian signé</a> · <a href="https://github.com/Matolechat/genesis-apt-registry">Repository GitHub</a></p>
+</body></html>
